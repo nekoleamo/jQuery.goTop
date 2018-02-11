@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>返回顶部插件demo</title>
+  <link rel="stylesheet" href="./iconfont.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .main {
+      width: 1000px;
+      height: 1500px;
+      margin: 0 auto;
+      background-color: lightblue;
+      text-align: center;
+      font-size: 22px;
+      line-height: 30px;
+      color: #000;
+    }
+
+    #go-top {
+      display: none;
+      font-size: 30px;
+      position: fixed;
+      bottom: 200px;
+      right: 50px;
+      border: 2px solid #333;
+      border-radius: 5px;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 主体内容 -->
+  <div class="container">
+    <div class="main">
+      这是一个返回顶部的demo
+    </div>
+  </div>
+  <!-- 返回顶部按钮 -->
+  <div id="go-top" class="iconfont icon-cc-top"></div>
+</body>
+<script src="./lib/jquery-1.12.0.min.js"></script>
+<script src="./lib/jquery.goTop.js"></script>
+<script>
+  $(function () {
+    // 获取按钮元素
+    $('#go-top').goTop({
+      scrollTop: 100, // 显示返回按钮时离顶部的距离（单位：px），默认100px
+      scrollSpeed: 1000, // 点击按钮返回顶部的速度（单位：ms），默认1000ms
+      fadeInSpeed: 1000, // 按钮缓动进入的速度（单位：ms），默认1000ms
+      fadeOutSpeed: 500 // 按钮缓动消失的速度（单位：ms），默认500ms
+    })
+  })
+</script>
+</html>
